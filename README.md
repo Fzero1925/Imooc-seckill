@@ -1,1 +1,1 @@
-# Imooc-seckill
+# seckill
