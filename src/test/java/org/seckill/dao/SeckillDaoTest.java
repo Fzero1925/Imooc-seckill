@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.seckill.entity.Seckill;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -23,12 +24,12 @@ public class SeckillDaoTest {
 	private SeckillDao seckillDao;
 
 	@Test
-	public void testReduceNumber() {
+	public void testReduceNumber() throws Exception {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testQueryById() {
+	public void testQueryById() throws Exception {
 		long id = 1000;
 		Seckill seckill = seckillDao.queryById(id);
 		System.out.println(seckill.getName());
@@ -36,7 +37,7 @@ public class SeckillDaoTest {
 	}
 
 	@Test
-	public void testQueryAll() {
+	public void testQueryAll() throws Exception {
 		fail("Not yet implemented");
 	}
 

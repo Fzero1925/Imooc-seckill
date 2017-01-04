@@ -7,11 +7,11 @@
 	<!-- 配置全局属性 -->	
 	<settings>
 		<!-- 使用jdbc的getGenerateKeys获取数据库自增主键值 -->
-		<setting name="useGenerateKeys" value="true"/>
+		<setting name="useGeneratedKeys" value="true"/>
 		<!-- 使用列别名替换列名 默认为true -->
-		<setting name="userColumnLabel" value="true"/>
+		<setting name="useColumnLabel" value="true"/>
 		<!-- 开启驼峰命名转换:Table(create_time) -> Entity(createTime) -->
-		<setting name="mapUnderscoreCamelCase" value="true"/>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
 </configuration>
   

@@ -4,13 +4,20 @@
     xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="
     	http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+        <!-- 
+        xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+        这样写<context:property-placeholder>没有报错 但是为什么？
+        -->
         
 <!-- 配置数据库相关参数 -->
 <context:property-placeholder location="classpath:jdbc.properties"/>
-<context:annotation-config/>
 
 <!-- 配置数据库连接池 -->
 <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -32,7 +39,7 @@
 </bean>
 
 <!-- 配置SqlSessionFactory对象 -->
-<bean id="sqlSessionFactory" class="org.mybatis.SqlSessionFactoryBean">
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	<!-- 注入数据库连接池 -->
 	<property name="dataSource" ref="dataSource"/>
 	<!-- 配置Mybatis全局配置文件 即mybatis-config.xml -->
