@@ -2,6 +2,9 @@ package org.seckill.dao;
 
 import static org.junit.Assert.*;
 
+import java.util.Date;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.seckill.entity.Seckill;
@@ -20,12 +23,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class SeckillDaoTest {
 	
 	//注入DAO实现类依赖
-	@Resource
-	private SeckillDao seckillDao;
+	@Autowired
+	private SeckillDao seckillDao;	
 
 	@Test
 	public void testReduceNumber() throws Exception {
-		fail("Not yet implemented");
+		Date killTime = new Date();
+		int updateCount = seckillDao.reduceNumber(1000L, killTime);
+		System.out.println("updateCount = " + updateCount);
 	}
 
 	@Test
@@ -38,7 +43,22 @@ public class SeckillDaoTest {
 
 	@Test
 	public void testQueryAll() throws Exception {
-		fail("Not yet implemented");
+		List<Seckill> seckills = seckillDao.queryAll(0, 100);
+		for(Seckill seckill : seckills){
+			System.out.println(seckill);
+			System.out.println();
+		}
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
