@@ -16,14 +16,21 @@ import org.seckill.exception.SeckillException;
 import org.seckill.service.SeckillService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
+@Service
 public class SeckillServiceImpl implements SeckillService {
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
+	//注入Service依赖
+	@Autowired
 	private SeckillDao seckillDao;
 	
+	@Autowired
 	private SuccessKilledDao successKilledDao;
 	
 	//MD5盐值字符串，用户混淆MD5
@@ -58,6 +65,7 @@ public class SeckillServiceImpl implements SeckillService {
 		return md5;
 	}
 
+	@Transactional
 	public SeckillExecution executeSeckill(long seckillId, long userPhone, String md5) {
 		if(md5 == null || !md5.equals(getMD5(seckillId))){
 			throw new SeckillException("seckill data rewrite");
