@@ -17,15 +17,19 @@ public class SeckillExecution {
 	
 	//状态信息
 	private String stateInfo;
-	
-	@Override
-	public String toString() {
-		return "SeckillExecution [seckillId=" + "" + seckillId + ", state=" + state + ", stateInfo=" + stateInfo
-				+ ", successKilled=" + successKilled + "]";
-	}
 
 	//秒杀成功对象
 	private SuccessKilled successKilled;
+	
+	@Override
+	public String toString() {
+		return "SeckillExecution [seckillId=" + 
+				"" + seckillId + 
+				", state=" + state + 
+				", stateInfo=" + stateInfo+ 
+				", successKilled=" + successKilled + 
+				"]";
+	}
 
 	public SeckillExecution(long seckillId, SeckillStateEnum stateEnum, SuccessKilled successKilled) {
 		super();
