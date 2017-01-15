@@ -81,12 +81,12 @@ public class SeckillController {
 	@ResponseBody
 	public SeckillResult<SeckillExecution> execute(@PathVariable("seckillId") Long seckillId, 
 												   @PathVariable("md5") String md5,
-												   @CookieValue(value = "killphone", required = false) Long phone){
+												   @CookieValue(value = "killPhone", required = false) Long phone){
 		
 		if(phone == null){
 			return new SeckillResult<SeckillExecution>(false, "未注册");
 		}
-		SeckillResult<SeckillExecution> result;
+		//SeckillResult<SeckillExecution> result;
 		try {
 			SeckillExecution execution = seckillService.executeSeckill(seckillId, phone, md5);
 			return new SeckillResult<SeckillExecution>(true, execution);
