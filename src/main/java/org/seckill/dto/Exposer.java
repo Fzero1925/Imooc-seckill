@@ -37,14 +37,12 @@ public class Exposer {
 	}
 
 	public Exposer(boolean exposed, String md5, long seckillId) {
-		super();
 		this.exposed = exposed;
 		this.md5 = md5;
 		this.seckillId = seckillId;
 	}
 
 	public Exposer(boolean exposed, long seckillId, long now, long start, long end) {
-		super();
 		this.exposed = exposed;
 		this.seckillId = seckillId;
 		this.now = now;
@@ -53,7 +51,6 @@ public class Exposer {
 	}
 
 	public Exposer(boolean exposed, long seckillId) {
-		super();
 		this.exposed = exposed;
 		this.seckillId = seckillId;
 	}

@@ -65,11 +65,16 @@
     </dependency>
     
     <!-- Servlet Web相关依赖 -->
-    <dependency>
+     <dependency>
       <groupId>taglibs</groupId>
       <artifactId>standard</artifactId>
       <version>1.1.2</version>
     </dependency>
+<!--     <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-impl</artifactId>
+      <version>1.2.5</version>
+	</dependency> -->
     
     <dependency>
       <groupId>jstl</groupId>
