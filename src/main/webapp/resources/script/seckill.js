@@ -3,7 +3,7 @@
  */
 var seckill = {
 		
-	//封装秒杀相关ajax的地址
+	//封装秒杀相关ajax的URL 
 	URl : {
 		now : function(){
 			return '/seckill/time/now';
@@ -82,6 +82,7 @@ var seckill = {
 			seckillBox.countdown(killTime, function(event){
 				//时间格式
 				var format = event.strftime('秒杀倒计时: %D天 %H时 %M分 %S秒');
+				seckillBox.html(format);
 				//时间完成后回调事件
 			}).on('finish.countdown', function(){
 				//调用执行秒杀的函数
@@ -114,12 +115,12 @@ var seckill = {
 						$.cookie('killPhone', inputPhone, {expires:7, path:'/seckill'});//手机号写入cookie
 						window.location.reload();//刷新页面
 					}else{
-						$('#killPhoneMessage').hide().html('<label class="label label-dange">手机号错误!</label>').show(300);
+						$('#killPhoneMessage').hide().html('<label class="label label-danger">手机号错误!</label>').show(300);
 					}
 				});
 			}
-			//已经登录
 			
+			//已经登录
 			//计时交互逻辑
 			var startTime = params['startTime'];
 			var endTime = params['endTime'];
@@ -128,7 +129,7 @@ var seckill = {
 				if(result && result['success']){
 					var nowTime = result['data'];
 					//时间判断，计时交互
-					seckill.countdown(seckillId, nowTime, startTime, endTiem);
+					seckill.countdown(seckillId, nowTime, startTime, endTime);
 				}else{
 					console.log('result: ' + result);
 				}

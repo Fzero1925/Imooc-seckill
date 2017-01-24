@@ -14,7 +14,7 @@
 	 		<div class="panel-heading text-center">
 	 			<h2>秒杀列表</h2>
 	 		</div>
-	 		<div class="panerl-body">
+	 		<div class="panel-body">
 	 			<table class="table table-hover">
 	 				<thead>
 	 					<tr>

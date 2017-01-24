@@ -17,7 +17,7 @@
 				<h2 class="text-danger">
 					<!-- 显示time图标 -->
 					<span class="glyphicon glyphicon-time"></span> 
-					<!-- 展示倒计时 -->
+					<!-- 显示面板 -->
 					<span class="glyphicon" id="seckill-box"></span>
 				</h2>
 			</div>
@@ -32,6 +32,7 @@
 						<span class="glyphicon glyphicon-phone"></span>秒杀电话：
 					</h3>				
 				</div>
+				
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-xs-8 col-xs-offset-2">
@@ -46,6 +47,7 @@
 					<span id="killPhoneMessage" class="glyphicon"></span>
 					<button type="button" id="killPhoneBtn" class="btn btn-success">
 						<span class="glyphicon glyphicon-phone"></span>
+						Submit
 					</button>
 				</div>
 			</div>
