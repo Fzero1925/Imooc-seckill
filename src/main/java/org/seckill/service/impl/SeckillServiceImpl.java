@@ -117,6 +117,8 @@ public class SeckillServiceImpl implements SeckillService {
 			throw new SeckillException("seckill inner error: " + e.getMessage());
 		}
 	}
+	
+	
 
 }
 
