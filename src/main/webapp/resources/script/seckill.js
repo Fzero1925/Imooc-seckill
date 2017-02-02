@@ -122,9 +122,9 @@ var seckill = {
 			
 			//已经登录
 			//计时交互逻辑
-			var startTime = params['startTime'];
-			var endTime = params['endTime'];
-			var seckillId = params['seckillId'];
+			var startTime = parseInt(params['startTime']);
+			var endTime = parseInt(params['endTime']);
+			var seckillId = parseInt(params['seckillId']);
 			$.get(seckill.URL.now(), {}, function(result){
 				if(result && result['success']){
 					var nowTime = result['data'];
