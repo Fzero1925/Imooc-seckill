@@ -4,7 +4,7 @@
 var seckill = {
 		
 	//封装秒杀相关ajax的URL 
-	URl : {
+	URL : {
 		now : function(){
 			return '/seckill/time/now';
 		},
@@ -125,7 +125,7 @@ var seckill = {
 			var startTime = params['startTime'];
 			var endTime = params['endTime'];
 			var seckillId = params['seckillId'];
-			$.get(seckill.URL.now, {}, function(result){
+			$.get(seckill.URL.now(), {}, function(result){
 				if(result && result['success']){
 					var nowTime = result['data'];
 					//时间判断，计时交互
