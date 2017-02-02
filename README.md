@@ -4,6 +4,7 @@
 - 后端：Spring + Spring MVC + MyBatis
 - 前端：Bootstrap
 - 优化：Redis、存储过程
+
 ## 页面展示
 ![列表页](http://upload-images.jianshu.io/upload_images/4221394-adca21bdacdca01a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
