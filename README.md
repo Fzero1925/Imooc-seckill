@@ -1,5 +1,4 @@
-# seckill
-# 高并发秒杀API
+# seckill——高并发秒杀API
 
 # 系统架构
 - 后端：Spring + Spring MVC + MyBatis
