@@ -34,7 +34,7 @@ public class RedisDao {
 			Jedis jedis = jedisPool.getResource();
 			try{
 				String key = "seckill: " + seckillId;
-				//没有实现内部序列化操作，采用自定义序列化
+				//Redis没有实现内部序列化操作，采用自定义序列化
 				byte[] bytes = jedis.get(key.getBytes());	
 				if(bytes != null){
 					//空对象
